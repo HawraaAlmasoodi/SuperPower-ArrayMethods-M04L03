@@ -116,8 +116,8 @@ console.log("Names: ", namesSuperheroes(superheroes));
 let lightSuperheroes = function (arr) {
     return arr.filter(hero => {
         return hero.weight < 190;
-    })
-}
+    });
+};
 
 console.log("Light Superheroes ", lightSuperheroes(superheroes));
 
