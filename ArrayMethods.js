@@ -156,7 +156,11 @@ console.log("heroes of Marvel Comics", heroesMarvelComics(superheroes));
 
 let totalWeightDC = function (arr) {
     return arr.map(hero => {
-        return parseInt(hero.weight, 10);
+        if (isNaN(hero.weight)) {
+            return 0;
+        } else {
+            return parseInt(hero.weight, 10);
+        }
     }).reduce((total, currentWeight) => {
         return total + currentWeight;
     });
